@@ -1,1 +1,49 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Greeting</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .greeting {
+            font-size: 3em;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting" id="greetingElement">Loading...</div>
+
+    <script>
+        window.onload = function() {
+            // Prompt user for their name
+            const name = prompt("Please enter your name:", "Kipngeno");
+            
+            // Get greeting element
+            const greetingEl = document.getElementById('greetingElement');
+            
+            // Update greeting text
+            if (name && name.trim() !== "") {
+                greetingEl.textContent = `Hi, ${name}!`;
+            } else {
+                greetingEl.textContent = "Hi there!";
+                greetingEl.style.color = "#888";
+            }
+        };
+    </script>
+</body>
+</html>
