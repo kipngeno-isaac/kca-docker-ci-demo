@@ -40,7 +40,7 @@ This sample project showcases:
 ### Run the Application
 ```bash
 # Run from Docker Hub
-docker run -d -p 8080:80 your-dockerhub-username/repo-name
+docker run -d -p 8080:80 kipngenoisaac/kca-docker-ci-demo
 
 # Or build locally
 docker build -t greeting-app .
